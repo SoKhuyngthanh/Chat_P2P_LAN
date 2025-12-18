@@ -30,10 +30,30 @@ namespace LanP2PChat
             
             // Bắt đầu chạy ngầm
             netManager.Start();
+
+            // Tạo Timer quét danh sách mỗi 5 giây
+            System.Windows.Forms.Timer timerCheckOffline = new System.Windows.Forms.Timer();
+            timerCheckOffline.Interval = 5000; 
+            timerCheckOffline.Tick += TimerCheckOffline_Tick;
+            timerCheckOffline.Start();
         }
 
         // --- SỰ KIỆN TỪ NETWORK ---
 
+        private void TimerCheckOffline_Tick(object sender, EventArgs e)
+        {
+            // Tìm những người đã quá 15 giây không thấy tăm hơi (UDP Hello gửi mỗi 3s)
+            var offlinePeers = peerList.Where(p => (DateTime.Now - p.LastSeen).TotalSeconds > 15).ToList();
+
+            if (offlinePeers.Count > 0)
+            {
+                foreach (var p in offlinePeers)
+                {
+                    peerList.Remove(p);
+                    lstPeers.Items.Remove(p.Name);
+                }
+            }
+        }
         private void NetManager_OnPeerFound(PeerInfo peer)
         {
             // Cập nhật giao diện phải dùng Invoke vì sự kiện này đến từ luồng khác

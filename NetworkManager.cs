@@ -198,6 +198,28 @@ namespace LanP2PChat
             {
                 throw new Exception("Không thể gửi tin nhắn: " + ex.Message);
             }
+
+            try
+            {
+                netManager.SendMessage(selectedPeer.IP, selectedPeer.TcpPort, msg);
+
+                // Lưu tin mình vừa gửi vào sổ luôn
+                string myLog = $"[{DateTime.Now:HH:mm}] Me: {msg}\r\n";
+                
+                if (!chatLogs.ContainsKey(selectedPeer.Name))
+                {
+                    chatLogs[selectedPeer.Name] = "";
+                }
+                chatLogs[selectedPeer.Name] += myLog;
+                // ---------------------
+
+                AppendMessage("Me", msg, Color.Blue);
+                txtMessage.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
 
         public void Stop()

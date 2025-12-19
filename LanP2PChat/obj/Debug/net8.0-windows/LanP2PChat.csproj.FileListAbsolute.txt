@@ -1,0 +1,14 @@
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\LanP2PChat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\LanP2PChat.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\LanP2PChat.AssemblyInfo.cs
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\LanP2PChat.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\LanP2PChat\bin\Debug\net8.0-windows\LanP2PChat.exe
+C:\Users\DELL\Documents\LanP2PChat\bin\Debug\net8.0-windows\LanP2PChat.deps.json
+C:\Users\DELL\Documents\LanP2PChat\bin\Debug\net8.0-windows\LanP2PChat.runtimeconfig.json
+C:\Users\DELL\Documents\LanP2PChat\bin\Debug\net8.0-windows\LanP2PChat.dll
+C:\Users\DELL\Documents\LanP2PChat\bin\Debug\net8.0-windows\LanP2PChat.pdb
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\LanP2PChat.dll
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\refint\LanP2PChat.dll
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\LanP2PChat.pdb
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\LanP2PChat.genruntimeconfig.cache
+C:\Users\DELL\Documents\LanP2PChat\obj\Debug\net8.0-windows\ref\LanP2PChat.dll
